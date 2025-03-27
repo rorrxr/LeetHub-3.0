@@ -37,5 +37,5 @@ https://chromewebstore.google.com/detail/leetcode-fix/kgenneohccgagookoocgihpkoh
 6. 앞서 만든 프로젝트를 압축 없이 업로드 합니다.
 7. 다시 LeetHub를 연결해주시면 됩니다.
 
-자세한 방법은 블로그 포스팅 게시글을 참고해주세요.
+자세한 방법은 블로그 포스팅 게시글을 참고해주세요. <br>
 https://deve1opment-story.tistory.com/entry/github-LeetHub-%EA%B9%83%ED%97%88%EB%B8%8C-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EA%B5%AC%EC%A1%B0-%EB%B3%80%EA%B2%BD%ED%95%98
