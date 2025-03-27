@@ -1,107 +1,41 @@
 
-# LeetHub v3 - Sync your code with GitHub
+# LeetHub v3 디렉토리 변경 커스터마이징 - 설명
 
-<p align="center">
-  <a href="https://github.com/raphaelheinz/LeetHub-3.0/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license"/>
-  </a>
-  <a href="https://chromewebstore.google.com/u/1/detail/leethub-v3/kdkgpjpenaeoodajljkflmlnkoihkmda">
-    <img src="https://img.shields.io/chrome-web-store/v/kdkgpjpenaeoodajljkflmlnkoihkmda.svg" alt="chrome-webstore"/>
-  </a>
-  <a href="https://chromewebstore.google.com/u/1/detail/leethub-v3/kdkgpjpenaeoodajljkflmlnkoihkmda">
-    <img src="https://img.shields.io/chrome-web-store/d/kdkgpjpenaeoodajljkflmlnkoihkmda.svg" alt="users">
-  </a>
-  <a href="https://github.com/raphaelheinz/LeetHub-3.0/graphs/contributors" alt="Contributors">
-    <img src="https://img.shields.io/github/contributors/raphaelheinz/LeetHub-3.0" />
-  </a>
-</p>
-<h1 align="center">
-    <img src="assets/octocode.png" alt="LeetHub v3" width="400">
-</h1>
+리트허브를 백준허브의 디렉토리 및 커밋 포맷으로 커스터마이징한 레포입니다. <br>
+리트코드 코드 제출 시 자동으로 싱크를 맞춘 레포에 자동으로 커밋합니다. <br>
 
+# 주의사항
 
-## What is LeetHub-3.0?
+https://chromewebstore.google.com/detail/leetcode-fix/kgenneohccgagookoocgihpkohmehnip
 
-A chrome extension that automatically pushes your code to GitHub when you pass all tests on a <a href="http://leetcode.com/">Leetcode</a> problem. It's forked from <a href="https://github.com/arunbhardwaj/LeetHub-2.0">LeetHub-2.0</a> which is not compatible with Leetcode anymore since the latest updates.
+이전에는 old version을 사용해야 하지만, 앞으로 old version을 leetcode에서 제공되지 않고 있습니다. <br>
+따라서 위의 링크에서 LeetCode Fix 확장 프로그램을 설치해야 합니다.<br>
 
-
-## Why LeetHub?
-
-There's no easy way of accessing your leetcode problems in one place! Moreover, pushing code manually to GitHub from Leetcode is very time consuming. So, why not just automate it entirely without spending a SINGLE additional second on it?
-
-## Screenshot
-
-<h1 align="center">
-    <img src="assets/extension/4.png" alt="leetcode view" width="800">
-</h1>
-
-## Supported UI
-
-LeetHub-3.0 works with two different Leetcode UIs. There are known issues when using the plugin with the "non-dynamic layout". Please use one of the following:
-
-1. **old layout** or
-2. new **"dynamic layout"**
-
-
-## Manual synchronization
-
-Your submission may not be successfully uploaded to GitHub if you update the text in the editor too fast. It is necessary to wait for 4 seconds (until the spinner stops) after submitting the solution before entering new characters, switching languages, or switching editors. During this period, your solution is being pushed to GitHub, and the website should maintain its layout without alteration. While this process is less than ideal, we have not found a better solution so far. Sorry for this inconvenience! If you find a fix, your PRs are welcome!
-
-In the meantime, we have added a manual synchronization button next to notes icon. Please use the manual sync button only after you have successfully submitted your solution to Leetcode. Additionally, you can push previous submissions to GitHub by selecting the submission first and then click on the manual synchronization button.
-
-
-## Installation
-
-<div align="center">
-    <a href="https://chromewebstore.google.com/u/1/detail/leethub-v3/kdkgpjpenaeoodajljkflmlnkoihkmda" rel="Download leetcode plugin">
-        <img src="https://embedsignage.com/wp-content/uploads/2016/04/embed-signage-chromeos-web-store-button.png" alt="Download leetcode plugin" width="300" />
-    </a>
-</div>
-
-1. **Chrome Web Store**
-
-    Install this plugin using Chrome Web Store. Please find the link above. This is the preferred way of installation. Updates are installed automatically.
-
-
-2. **(Optional) Manual installation**
-
-    You can also install the plugin manually. Please follow the steps below.
-
-    * Create your own OAuth app in GitHub (https://github.com/settings/applications/new) and store CLIENT_ID and CLIENT_SECRET confidentially
-        * Application name: [CUSTOM]
-        * Homepage URL: https://github.com/raphaelheinz/LeetHub-3.0
-        * Authorization callback URL: https://github.com/
-    * Download the project ZIP (<a href="https://github.com/raphaelheinz/LeetHub-3.0/releases">Releases</a>) or clone this repository
-    * Run ```npm run setup``` to install the developer dependencies
-    * Update CLIENT_ID and CLIENT_SECRET in ```scripts/authorize.js``` and ```scripts/oauth2.js``` with your ids
-    * Go to <a href="chrome://extensions">chrome://extensions</a>
-    * Enable <a href="https://www.mstoic.com/enable-developer-mode-in-chrome/">Developer mode</a> by toggling the switch on top right corner
-    * Click **"Load unpacked"**
-    * Select the entire LeetHub folder
-
-
-## Setup
-
-1. After installing the LeetHub, launch the plugin
-2. Click on **"Authorize with GitHub"** to set up your account with LeetHub
-3. Setup an existing/new repository with LeetHub (private by default) by clicking **"Get Started"**
-4. Begin Leetcoding! To view your progress, simply click on the extension!
-
-
-## Supported npm commands
-
-```bash
-npm run               # Show available commands
-npm run setup         # Install dependencies
-npm run format        # Auto-format JavaScript, HTML/CSS
-npm run format-test   # Test if code is formatted properly
-npm run lint          # Lint JavaScript
-npm run lint-test     # Test if code is linted properly
+# 수정한 점
+디렉토리 구조 변경
+```
+└─LeetCode
+  ├─0001-two-sum
+  ├─0136-single-number
+  ├─0169-majority-element
+  ├─0074-search-a-2d-matrix
+  ├─0079-word-search
+  ├─0128-longest-consecutive-sequence
+  ├─0179-largest-number
+  ├─0279-perfect-squares
+  ├─0473-matchsticks-to-square
+  └─0873-length-of-longest-fibonacci-subsequence
 ```
 
-## Contribution
+# 사용방법
 
-Please help to further improve this awesome plugin! We would appreciate your support. Your pull requests are welcome!
+1. 해당 레포지토리를 git clone 받습니다.
+2.  크롬 익스텐션에서 개발자 모드 > 확장 프로그램 관리 > 압축 해제된 확장 프로그램을 로드합니다 > 해당 프로젝트 디렉토리  로드
+3. ...을 클릭합니다.
+4. 확장 프로그램 > 확장 프로그램 관리를 클릭합니다.
+5. 압축해제된 확장 프로그램을 로드합니다를 클릭합니다.
+6. 앞서 만든 프로젝트를 압축 없이 업로드 합니다.
+7. 다시 LeetHub를 연결해주시면 됩니다.
 
-Don't forget to star this repository for further development of new features. If you want a particular feature, simply [request](https://github.com/raphaelheinz/LeetHub-3.0/labels/feature) for it!
-
+자세한 방법은 블로그 포스팅 게시글을 참고해주세요.
+https://deve1opment-story.tistory.com/entry/github-LeetHub-%EA%B9%83%ED%97%88%EB%B8%8C-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EA%B5%AC%EC%A1%B0-%EB%B3%80%EA%B2%BD%ED%95%98
